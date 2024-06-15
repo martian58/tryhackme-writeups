@@ -157,7 +157,7 @@ return [
             'server' => 'localhost',
             'database' => 'mKingdom',
             'username' => 'toad',
-            'password' => 'toadisthebest',
+            'password' => '<Hidde-Password>',
             'character_set' => 'utf8',
             'collation' => 'utf8_unicode_ci',
         ],
@@ -210,7 +210,7 @@ toad@mkingdom:~$
 
 ```bash
 toad@mkingdom:~$ echo "aWthVGVOVEFOdEVTCg==" | base64 -d
-ikaTeNTANtES
+<Hidden-Password>
 ```
 
 Trying the output as password we get access to `mario` account.
