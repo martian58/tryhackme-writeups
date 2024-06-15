@@ -1,2 +1,2 @@
 # CTF_Write_Ups
-Write ups of some CTF Challenges 
+Write ups of some CTF Challenges from TryHackMe
