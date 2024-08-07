@@ -157,7 +157,7 @@ return [
             'server' => 'localhost',
             'database' => 'mKingdom',
             'username' => 'toad',
-            'password' => '<Hidde-Password>',
+            'password' => '<Hidden-Password>',
             'character_set' => 'utf8',
             'collation' => 'utf8_unicode_ci',
         ],
