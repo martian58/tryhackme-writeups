@@ -168,7 +168,7 @@ Now We can get user.txt from the desktop.
 ![user_txt](./assets/user_txt.png)
 
 
-## Privilage Escelation
+## Privilege Escalation
 
 For this we need to go back to the admin page. On "Appearance > Theme Editor" change the "index.php" file to a reverse shell. You can get it form [here](https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php) 
 
